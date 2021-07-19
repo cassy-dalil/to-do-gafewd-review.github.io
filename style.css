@@ -1,0 +1,99 @@
+body {
+    background-image: url(./cork.jpg);
+    font-family: 'Yomogi', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* form styles */
+
+h1 {
+    font-size: 24pt;
+    color: white;
+}
+
+input {
+    width: 175px;
+    padding: 10px 30px 10px 10px;
+    border-radius: 7px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+/* list styles */
+
+.lists-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.list {
+    background-color: white;
+    border: 7px;
+    box-shadow: 2px 2px 2px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    margin: 20px;
+}
+
+@media (min-width: 667px) {
+    .list {
+        min-width: 400px;
+    }
+}
+
+.list ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* style list items, common styles */
+
+.to-do-item, .done-item {
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px gray;
+    height: 30px;
+    min-width: 300px;
+    margin: 10px;
+    padding: 5px 8px;
+}
+
+/* style list item specific to to-do-item */
+
+.to-do-item {
+    background: #c2c2c2;
+    cursor: pointer;
+    position: relative;
+}
+
+/* a pseudo element that appears on hover pseudo class */
+
+.to-do-item:hover::after {
+    /* css entity */
+    content: "\2713";
+
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    border-radius: 7px;
+}
+
+/* style list item specific to done-item */
+
+.done-item {
+    background: #3dac4c;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="form-container">
+            <h1>To Do List</h1>
+            <form id="to-do-form">
+                <label for="input-box"></label>
+                <input type="text" id="to-do-input" placeholder="Enter to-do here..."/>
+                <button type="submit" name="button" id="submit">Add</button>
+            </form>
+        </section>
+
+        <section class="lists-container">
+            <div class="list">
+                <h2>To Do List: <span id="to-do-count">0</span></h2>
+                <ul id="to-do-list">
+                    <!-- <li class="to-do-item">Watch TV</li> -->
+                </ul>
+            </div>
+
+            <div class="list">
+                <h2>Completed List: <span id="completed-count">0</span></h2>
+                <ul id="completed-list">
+                    <!-- <li class="done-item">Do Homework</li> -->
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
