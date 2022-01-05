@@ -4,14 +4,14 @@ const toDoList = document.querySelector("#to-do-list");
 const toDoCount = document.querySelector("#to-do-count");
 const completedToDoList = document.querySelector("#completed-list");
 const completedToDoCount = document.querySelector("#completed-count");
-​
+
 let toDos = [];
 let completedToDos = [];
-​
+
 form.addEventListener("submit", addToDo);
-​
+
 // 1. ADDING TO-DOS
-​
+
 // add event function
 function addToDo(event) {
   // prevents refresh on submit
@@ -26,8 +26,8 @@ function addToDo(event) {
   }
   toDoInput.value = ""; // clear input
 }
-​
-​
+
+
 // render all function
 function renderToDos() {
   toDoList.innerHTML = ""; // clear list first
@@ -42,8 +42,8 @@ function renderToDos() {
   // }
   toDoCount.innerText = toDos.length;
 }
-​
-​
+
+
 // render single item function 
 function renderToDo(itemText) {
   let li = document.createElement("li");
@@ -55,9 +55,9 @@ function renderToDo(itemText) {
     completeToDo(itemText);
   })
 }
-​
+
 // 2. COMPLETE TO-DOS
-​
+
 // move to complete function
 function completeToDo(toDo) {
   completedToDos.push(toDo);
@@ -66,17 +66,17 @@ function completeToDo(toDo) {
   renderToDos();
   renderCompletedToDos();
 }
-​
+
 // render all function
 function renderCompletedToDos() {
   completedToDoList.innerHTML = "";
-​
+
   for (completedToDo of completedToDos) {
     renderCompleted(completedToDo);
   }
   completedToDoCount.innerText = completedToDos.length;
 }
-​
+
 // render single item function
 function renderCompleted(itemText) {
   let li = document.createElement("li");
